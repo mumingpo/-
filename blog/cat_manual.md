@@ -1,7 +1,5 @@
 ---
 title: 养猫的学问
-project-name: 雅茗屋
-project-tagline: 慕茗的历程
 layout: default
 ---
 
