@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+<h1>Hello world!</h1>
+<p>This is my first website!</p>
+<button type="button" onclick="myFunction()">This is a button</button>
+<div id="chicken"></div>
+<script>
+function myFunction(){
+  var s = "";
+  s += "<p>I clicked a button!</p>";
+  s += "<p>A javascript has been executed!</p>";
+  s += "<p>The first 10 digits of the Fibonacci Sequence are:</p>";
+  var f = [1,1];
+  while (f.length < 10){
+    f[f.length] = f[f.length-1] + f[f.length-2];
+  }
+  s += "<ul>";
+  for (var i = 0; i < f.length; i++){
+  s += "<li>";
+  s += f[i];
+  s += "</li>";
+  }
+  s += "</ul>";
+  s += "<p>The source code of the javascript is:</p>"
+  s += '<div style="background-color:#EFEFEF;margin:100px;border-style:dashed;">'
+  s += encodeURI(myFunction);
+  s += "</div>"
+  document.getElementById("chicken").innerHTML = s;
+}
+</script>
+</body>
