@@ -238,12 +238,19 @@ _2017-11-04_
 
 *   绝育: 猫不像人, 会考虑自己的子女的生存问题. 如果你养一只不绝育的猫, 它只会在成熟之后到处沾花野草. 猫六个月性成熟, 怀胎九周生育, 一胎通常能生3-5个. 一对刚生下来的猫, 条件理想的话(假设每三个月怀孕一次), 两年以后你将拥有74只猫. 即使你有能力养10只猫, 你也造成了64只流浪猫的悲惨生涯.
 
+![](https://raw.githubusercontent.com/mumingpo/mumingpo.github.io/master/resources/pic/cat_pop_model.png)
+
 *   喂野猫: 街上的野猫虽然可怜, 但是它们在食物充足的环境里只会繁育更多的猫. 你今天喂了一只猫, 就是明天让四五只猫挨饿. 虽然是慈悲的举动, 但会引来残忍的结局. 如果你真的可怜它, 把它勾引到怀中, 打疫苗绝育完, 领养回家就是.
 
 *   折耳猫: 关于这个品种的争议很多, 我在这里尽量说话有根有据, 啰嗦了一点的话请见谅.
 > 折耳猫是1966年英国开始培育的一个非"传统"猫[1](http://fanciers.com/breed-faqs/scottish-fold-faq.html). 折耳的现象是由于一个"不完全显性"的基因变异影响软骨发育所导致的, 也就是说虽然只有一份变异基因就能导致折耳, 两份和一份会对软骨发育导致不同程度的影响[2](https://www.ncbi.nlm.nih.gov/pubmed/18339089).
+
 > 这个影响软骨发育的基因会导致一种软骨发育不良的病症. 包括只有一份变异基因的猫在内, **所有**折耳猫都会被其影响(折耳本身就是因为构成耳朵的软骨发育不良所导致的), 并且此症没有有效的治疗手段[3](https://www.ufaw.org.uk/cats/scottish-fold-osteochondrodysplasia)
+
 > 双份变异基因的几乎全部会被严重的软骨发育不良病症所影响. 最开始表现为粗短的尾巴, 僵硬的脊椎和关节, 以及困难行走和呼吸. 病症会愈发严重, 最后选择基本上只有安乐死结束痛苦. [3](https://www.ufaw.org.uk/cats/scottish-fold-osteochondrodysplasia)
+
 > **所有的**单份变异基因携带猫, 虽然不会在生命早期出现病状, 都会在发育过程中逐渐在身体各处产生慢性关节炎. 为此, 这个品种的繁衍已经被其原发源地英国所禁止[4](http://www.vin.com/apputil/content/defaultadv1.aspx?meta=generic&pid=8768&id=3850218)
+
 > 虽然美国CFA承认折耳猫这一个品种, 但是世界上其他几个猫的繁殖认证机构, 包括Governing Council of the Cat Fancy(英国)[5](https://www.gccfcats.org/Health-Welfare)以及Fédération Internationale Féline(法国)[6](http://fifeweb.org/wp/org/!min/030622_valtice_min.html), 都因为此病不承认折耳猫作为猫的一个品种进行繁育.
+
 > 2003年, 研究组织提供300个猫的x光片经费来请全世界的折耳猫繁育者证明单份基因的折耳猫不存在骨骼发育问题. **至今没有任何人接受这个测试.**[7](http://koryos.tumblr.com/post/63026345027/if-you-love-scottish-fold-cats-im-going-to-tell)
