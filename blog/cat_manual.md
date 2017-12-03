@@ -267,3 +267,5 @@ _2017-11-05_
 > 虽然美国CFA承认折耳猫这一个品种, 但是世界上其他几个猫的繁殖认证机构, 包括Governing Council of the Cat Fancy(英国)[5](https://www.gccfcats.org/Health-Welfare)以及Fédération Internationale Féline(法国)[6](http://fifeweb.org/wp/org/!min/030622_valtice_min.html), 都因为此病不承认折耳猫作为猫的一个品种进行繁育.
 
 > 2003年, 研究组织提供300个猫的x光片经费来请全世界的折耳猫繁育者证明单份基因的折耳猫不存在骨骼发育问题. **至今没有任何人接受这个测试.**[7](http://koryos.tumblr.com/post/63026345027/if-you-love-scottish-fold-cats-im-going-to-tell)
+
+*   猫瘟: [这点咱完全没有别人懂得多, 在这里就引荐一下一个值得信赖的来源啦~](https://mp.weixin.qq.com/s/VLMPXlv5T7sawFqWaIOCeA)
