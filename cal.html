@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<head>
+<title>崩崩提升计算 by: 慕茗</title>
+<style>
+body{
+  margin:0;
+  color:#357a38;
+  font-family:Microsoft YaHei;
+  overflow: hidden;
+}
+.overlay{
+  background-color: rgba(255,255,255,0.8);
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;/*
+  display: none;*/
+}
+.input-dialog{
+  position: fixed;
+  border: 8px dashed #93cf96;
+  background-color: #dcefdd;
+  border-radius: 5px;
+  margin-top: 10vh;
+  margin-left: 30vw;
+  width: 40vw;
+  height: 80vh;
+}
+.container {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+}
+.equipment{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  width: 12%;
+  height: 30%;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  transition: opacity .5s;
+  color: rgba(255,255,255,0.5);
+  font-size: 32px;
+  }
+.equipment:hover {
+  opacity: 0.7;
+}
+.slider-color {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity:0.7;
+  -webkit-transition: opacity .15s ease-in-out;
+  transition: opacity .15s ease-in-out;
+}
+.slider-color:hover {
+  opacity:1;
+}
+.slider-color::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+.slider-color::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border: 0;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+</style>
+<script>
+function createRangeInput(id, val=0, max=0, isPercentage=true){
+  var r = document.createElement("input");
+  r.type = "range";
+  r.setAttribute("class", "slider-color");
+  r.style = "width:70%;";
+  r.min = "0";
+  if (max==0){
+    if (isPercentage){
+      r.max = "3";
+      } else  {
+      r.max == "148";
+      }
+  } else  {
+    r.max = max;
+  }
+  if (isPercentage){
+    r.step = "0.01";
+  }
+  r.value = val;
+  r.id = id+"r";
+  return r;
+}
+function createValueInput(id, val=0){
+  var v = document.createElement("input");
+  v.type = "text";
+  v.style = "width:10%;text-align:right;";
+  v.value = val;
+  v.placeholder = "0";
+  v.id = id+"v";
+  return v;
+}
+function createAdjusterPair(parent, name, id, val=0, max=0, isPercentage=true){
+  var t = document.createElement("p");
+  t.innerHTML = name;
+  var r = createRangeInput(id, val, max, isPercentage);
+  var v = createValueInput(id, val);
+  parent.appendChild(t);
+  parent.appendChild(r);
+  if (isPercentage){
+    var s = document.createElement("span");
+    var t2 = document.createTextNode("%");
+    t2.style = "color:#000;font-size:0.7em;";
+    s.appendChild(v);
+    s.appendChild(t2);
+    parent.appendChild(s);
+  } else  {
+    parent.appendChild(v);
+  }
+  linkAdjusterPair(id, isPercentage);
+}
+function linkAdjusterPair(id, isPercentage=true){
+  if (isPercentage){
+    //document.getElementById(id+"v").onchange="document.getElementById('"+id+"r').value=document.getElementById('"+id+"v').value/100"
+    //document.getElementById(id+"r").onchange="document.getElementById('"+id+"v').value=document.getElementById('"+id+"r').value*100"
+    document.getElementById(id+"v").setAttribute("onchange", "document.getElementById('"+id+"r').value=document.getElementById('"+id+"v').value/100");
+    document.getElementById(id+"r").setAttribute("onchange", "document.getElementById('"+id+"v').value=document.getElementById('"+id+"r').value*100");
+  }  else  {
+    document.getElementById(id+"v").setAttribute("onchange", "document.getElementById('"+id+"r').value=document.getElementById('"+id+"v').value");
+    document.getElementById(id+"r").setAttribute("onchange", "document.getElementById('"+id+"v').value=document.getElementById('"+id+"r').value");
+  }
+}
+function edit(id){
+}
+
+function cancelEdit(){
+  document.getElementById("overlay").style="display:none;"
+}
+
+/*
+function init(){
+  container = document.getElementById ("container");
+  if (container.addEventListener) {
+    container.addEventListener ('DOMSubtreeModified', OnSubtreeModified, false);
+  }
+}*/
+</script>
+</head>
+
+<body><!-- onload="init()"-->
+<h2 style="background-color:#93cf96;margin:0px;padding-left:10%;padding-top:5%;padding-bottom:3%">崩崩提升计算</h2>
+<div id="overlay" class="overlay">
+  <div class="input-dialog">
+    <canvas id="closeButton" onclick="cancelEdit()" style="width:40px;height:40px;position:absolute;top:4%;right:4%;"></canvas>
+    <h2 style="background-color:#93cf96;margin:0px;padding-left:10%;padding-top:5%;padding-bottom:5%">设置属性</h2>
+    <div style="background-color:rgba(0,0,0,0.1);">
+      <input list="type" placeholder="请选择一项提升种类" style="margin:20px;margin-left:67%;">
+      <datalist id="type">
+        <option value="百分比增伤">
+        <option value="数值增伤">
+        <option value="暴击">
+        <option value="暴伤">
+      </datalist>
+      <canvas id="addButton" style="width:25px;height:25px;position:absolute;top:16%;right:5%;"></canvas>
+    </div>
+    <div style="overflow-x: auto;" id="input-field"></div>
+  </div>
+</div>
+<div style="clear:none;">
+  <div style="clear:none;width:64vw;">
+    <div class="container" style="position:fixed;width:50vw;height:32vw;margin-top:0;margin-left:6vw;background:#f8f8f8;float:left;">
+      <div class="equipment" id="w1" style="background-color:#944dff;left:40%;top:10%;">武器1</div>
+      <div class="equipment" id="w2" style="background-color:#9066ff;left:60%;top:10%;">武器2</div>
+      <div class="equipment" id="w3" style="background-color:#887bff;left:80%;top:10%;">武器3</div>
+      <div class="equipment" id="c1" style="background-color:#ffa239;left:40%;bottom:10%;">徽章1</div>
+      <div class="equipment" id="c2" style="background-color:#ff9852;left:60%;bottom:10%;">徽章2</div>
+      <div class="equipment" id="c3" style="background-color:#ff905b;left:80%;bottom:10%;">徽章3</div>
+      <div class="equipment" id="a" style="background-color:#0095ff;left:15%;top:10%;">服装</div>
+      <div class="equipment" id="p" style="background-color:#ff3300;left:15%;bottom:10%;">使魔</div>
+      <div class="equipment" id="ch" style="width:4%;height:10%;background-color:#f0f0f0;left:4%;top:20%;color:#777;font-size:16px;">角色</div>
+      <!--
+      <div class="equipment" style="background-color:#ffa239;left:20%;">fish</div>
+      <div class="equipment" style="background-color:#0095ff;left:40%;">fish</div>
+      <div class="equipment" style="background-color:#944dff;left:60%;">fish</div>-->
+    </div>
+    <div style="position:fixed;margin-left:6vw;bottom:7vh;align:bottom-left;padding-top:30px; padding-right:52vw;background-color:#ddd;">
+    </div>
+  </div>
+  <div style="background-color:#c9e7ca;width:36vw;padding-bottom:50%;margin:0;float:right;clear:none;">
+    <div style="float:top;overflow-y:auto;padding-bottom:75vh"></div>
+    <div style="float:bottom;">chicken</div>
+  </div>
+</div>
+<script>
+  var c = document.getElementById("closeButton");
+  c.width = c.clientWidth;
+  c.height = c.clientHeight;
+  var ctx = c.getContext("2d");
+  ctx.strokeStyle="#357a38";
+  ctx.lineWidth=5;
+  ctx.arc(20, 20, 18, 0, 2*Math.PI);
+  ctx.stroke()
+  ctx.beginPath()
+  ctx.moveTo(20-18*Math.sqrt(2)/2, 20-18*Math.sqrt(2)/2)
+  ctx.lineTo(20+18*Math.sqrt(2)/2, 20+18*Math.sqrt(2)/2)
+  ctx.stroke()
+  ctx.beginPath()
+  ctx.moveTo(20-18*Math.sqrt(2)/2, 20+18*Math.sqrt(2)/2)
+  ctx.lineTo(20+18*Math.sqrt(2)/2, 20-18*Math.sqrt(2)/2)
+  ctx.stroke()
+  var c = document.getElementById("addButton");
+  c.width = c.clientWidth;
+  c.height = c.clientHeight;
+  var ctx = c.getContext("2d");
+  ctx.strokeStyle="#357a38";
+  ctx.lineWidth=3;
+  ctx.beginPath()
+  ctx.moveTo(12,0)
+  ctx.lineTo(12,25)
+  ctx.stroke()
+  ctx.beginPath()
+  ctx.moveTo(0,12)
+  ctx.lineTo(25,12)
+  ctx.stroke()
+</script>
+<!--<script>var p = document.createElement("div");p.setAttribute("class", "container");p.style="width:300px;";document.body.appendChild(p);createAdjusterPair(p, "伤害提升", "t1");</script>-->
+<!--
+<div class="container" id="crest" style="width:300px;">
+  <p id="t1">伤害提升</p>
+  <input type="range" min="0" max="3" value="0" step="0.01" class="slider-color" style="width:70%;" id="t1r" />
+  <span style="color:#000;font-size:0.7em;"><input type="text" value="0" style="width:10%;text-align:right;" placeholder="0" id="t1v"/>%</span>
+  
+  <script>linkAdjusterPair("t1")</script>
+</div>
+-->
+</body>
