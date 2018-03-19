@@ -13,25 +13,27 @@
 
   <body style="overflow-y:hidden">
     <!--nav bar-->
-    <nav class="navbar navbar-light fixed-bottom bg-warning" style="height:10vh;padding:0 1rem">
-      <a class="navbar-brand" href="#" style="text-align:bottom">
-        <img class= "d-inline-block align-top rounded" src="assets/bhk/l.png" style="height:5vh;width:5vh" alt="logo">
-        <span class="align-middle">雅茗屋</span>
-      </a>
-      <div class="btn-group">
-        <button id="topbtn" type="button" class="btn btn-outline-warning btn-secondary bg-light">
-          top
-        </button>
-        <button id="upbtn" type="button" class="btn btn-outline-warning btn-secondary bg-light">
-          ↑
-        </button>
-        <button id="downbtn" type="button" class="btn btn-outline-warning btn-secondary bg-light">
-          ↓
-        </button>
-      </div>
-      <div class="container">
-        <div class="progress w-100">
-          <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:0%"></div>
+    <nav id="navbar" class="navbar navbar-light fixed-bottom bg-warning" style="height:10vh;padding:0 1rem">
+      <div class="row w-100 justify-content-between">
+        <a class="col col-2 navbar-brand" href="/" style="text-align:bottom">
+          <img class= "d-inline-block align-top rounded" src="assets/bhk/l.png" style="height:5vh;width:5vh" alt="logo">
+          <span class="align-middle">雅茗屋</span>
+        </a>
+        <div class="col col-sm-12 col-md-8 align-self-center order-sm-12 order-md-6">
+          <div class="progress">
+            <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:0%"></div>
+          </div>
+        </div>
+        <div class="col col-sm-2 col-md-1 btn-group order-sm-6 order-md-12">
+          <button id="topbtn" type="button" class="btn btn-outline-warning btn-secondary bg-light">
+            top
+          </button>
+          <button id="upbtn" type="button" class="btn btn-outline-warning btn-secondary bg-light">
+            ↑
+          </button>
+          <button id="downbtn" type="button" class="btn btn-outline-warning btn-secondary bg-light">
+            ↓
+          </button>
         </div>
       </div>
     </nav>
