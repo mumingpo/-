@@ -69,6 +69,14 @@ $(document).ready(function(){
   $("#topbtn").on("click", scrollToTop);
   $("#upbtn").on("click", scrollUp);
   $("#downbtn").on("click", scrollDown);
-
+  
+  //showhide navbar
+  $("#hidebtn").on("click", function(){
+    $("#navbar").hide();
+    $("#navalert").show();
+  });
+  $("html").on("dblclick", function(){
+    $("#navbar").show();
+  })
 
 });

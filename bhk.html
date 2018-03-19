@@ -15,7 +15,7 @@
     <!--nav bar-->
     <nav id="navbar" class="navbar navbar-light fixed-bottom bg-warning" style="height:10vh;padding:0 1rem">
       <div class="row w-100 justify-content-between">
-        <a class="col col-2 navbar-brand" href="/" style="text-align:bottom">
+        <a class="col col-sm-2 col-md-1 navbar-brand" href="/" style="text-align:bottom">
           <img class= "d-inline-block align-top rounded" src="assets/bhk/l.png" style="height:5vh;width:5vh" alt="logo">
           <span class="align-middle">雅茗屋</span>
         </a>
@@ -24,9 +24,12 @@
             <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:0%"></div>
           </div>
         </div>
-        <div class="col col-sm-2 col-md-1 btn-group order-sm-6 order-md-12">
+        <div class="col col-sm-4 col-md-2 btn-group order-sm-6 order-md-12">
           <button id="topbtn" type="button" class="btn btn-outline-warning btn-secondary bg-light">
             top
+          </button>
+          <button id="hidebtn" type="button" class="btn btn-outline-warning btn-secondary bg-light">
+            hide
           </button>
           <button id="upbtn" type="button" class="btn btn-outline-warning btn-secondary bg-light">
             ↑
@@ -37,6 +40,13 @@
         </div>
       </div>
     </nav>
+    
+    <div id="navalert" class="alert alert-warning alert-dismissible fade show fixed-bottom" style="display:none;border-radius:5rem" role="alert">
+      <strong>Navigation bar hidden.</strong> Double-click anywhere to show.
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
 
     <!--actual stuff-->
     <div id="t0" class="container-fluid" style="height:100vh;">
