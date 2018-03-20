@@ -52,7 +52,7 @@ $(document).ready(function(){
   }
   
   //binding the scroll functions
-  $("html").on("scroll", function(e){e.preventDefault();});
+  $("html").on("scroll touchmove", function(e){e.preventDefault();});
   $("html").on('mousewheel', function(e){
     e.preventDefault();
     if(e.originalEvent.wheelDelta > 0){scrollUp();}
