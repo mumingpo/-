@@ -77,6 +77,7 @@ $(document).ready(function(){
   });
   $("html").on("dblclick", function(){
     $("#navbar").show();
+    $("#navalert").remove();
   })
 
 });
